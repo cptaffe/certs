@@ -1,0 +1,19 @@
+{
+    "CN": "Heavy Computer Root CA",
+    "CA": {
+        "expiry": "87600h"
+    },
+    "key": {
+        "algo": "rsa",
+        "size": 2048
+    },
+    "names": [
+        {
+            "O": "Heavy Computer",
+            "OU": "Heavy Computer Root CA",
+            "L": "Little Rock",
+            "ST": "Arkansas",
+            "C": "US"
+        }
+    ]
+}

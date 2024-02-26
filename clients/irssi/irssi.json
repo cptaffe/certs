@@ -1,0 +1,16 @@
+{
+    "CN": "irssi.heavy.computer",
+    "key": {
+        "algo": "rsa",
+        "size": 4096
+    },
+    "names": [
+        {
+            "C": "US",
+            "ST": "Arkansas",
+            "L": "Little Rock",
+            "O": "Heavy Computer",
+            "OU": "Heavy Computer Registry"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "CN": "misc.home.arpa",
+    "key": {
+        "algo": "rsa",
+        "size": 2048
+    },
+    "names": [
+        {
+            "C": "US",
+            "ST": "Arkansas",
+            "L": "Little Rock",
+            "O": "Heavy Computer",
+            "OU": "Heavy Computer Registry"
+        }
+    ],
+    "hosts": [
+        "misc.home.arpa",
+        "cups.home.arpa",
+        "znc.home.arpa",
+        "localhost",
+        "10.0.3.3"
+    ]
+}
