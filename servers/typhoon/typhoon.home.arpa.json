@@ -1,5 +1,5 @@
 {
-    "CN": "Heavy Computer Intermediate CA",
+    "CN": "typhoon.home.arpa",
     "key": {
         "algo": "rsa",
         "size": 2048
@@ -10,7 +10,13 @@
             "ST": "Arkansas",
             "L": "Little Rock",
             "O": "Heavy Computer",
-            "OU": "Heavy Computer Intermediate CA"
+            "OU": "Heavy Computer Registry"
         }
+    ],
+    "hosts": [
+        "typhoon.home.arpa",
+        "dvr.home.arpa",
+        "localhost",
+        "10.0.3.5"
     ]
 }

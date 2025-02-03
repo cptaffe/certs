@@ -1,5 +1,5 @@
 {
-    "CN": "Heavy Computer Intermediate CA",
+    "CN": "una.home.arpa",
     "key": {
         "algo": "rsa",
         "size": 2048
@@ -10,7 +10,12 @@
             "ST": "Arkansas",
             "L": "Little Rock",
             "O": "Heavy Computer",
-            "OU": "Heavy Computer Intermediate CA"
+            "OU": "Heavy Computer Registry"
         }
+    ],
+    "hosts": [
+        "una.home.arpa",
+        "localhost",
+        "10.0.3.2"
     ]
 }

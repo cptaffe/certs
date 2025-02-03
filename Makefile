@@ -10,14 +10,22 @@ certs: \
 	servers/misc/misc.home.arpa-server.pem \
 	servers/misc/misc.home.arpa-server-key.pem \
 	servers/pfsense/pfsense.home.arpa-server.pem \
+	servers/pfsense/pfsense.home.arpa-server-chain.pem \
 	servers/pfsense/pfsense.home.arpa-server-key.pem \
 	servers/registry/registry.home.arpa-server.pem \
 	servers/registry/registry.home.arpa-server-key.pem \
+	servers/typhoon/typhoon.home.arpa-server.pem \
+	servers/typhoon/typhoon.home.arpa-server-key.pem \
+	servers/una/una.home.arpa-server.pem \
+	servers/una/una.home.arpa-server-key.pem \
 	servers/vms/vms.home.arpa-server.pem \
 	servers/vms/vms.home.arpa-server-key.pem
 
 servers/%-server.pem servers/%-server-key.pem: servers/%.json intermediate-ca.pem intermediate-ca-key.pem cfssl.json
 	cfssl gencert -ca intermediate-ca.pem -ca-key intermediate-ca-key.pem -config cfssl.json -profile=server $< | cfssljson -bare $(basename $<)-server
+
+servers/%-server-chain.pem: servers/%-server.pem intermediate-ca.pem ca.pem
+	cat $^ >$<
 
 clients/%-client.pem clients/%-client-key.pem: clients/%.json intermediate-ca.pem intermediate-ca-key.pem cfssl.json
 	cfssl gencert -ca intermediate-ca.pem -ca-key intermediate-ca-key.pem -config cfssl.json -profile=client $< | cfssljson -bare $(basename $<)-client
