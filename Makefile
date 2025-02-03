@@ -25,7 +25,7 @@ servers/%-server.pem servers/%-server-key.pem: servers/%.json intermediate-ca.pe
 	cfssl gencert -ca intermediate-ca.pem -ca-key intermediate-ca-key.pem -config cfssl.json -profile=server $< | cfssljson -bare $(basename $<)-server
 
 servers/%-server-chain.pem: servers/%-server.pem intermediate-ca.pem ca.pem
-	cat $^ >$<
+	cat $^ >$@
 
 clients/%-client.pem clients/%-client-key.pem: clients/%.json intermediate-ca.pem intermediate-ca-key.pem cfssl.json
 	cfssl gencert -ca intermediate-ca.pem -ca-key intermediate-ca-key.pem -config cfssl.json -profile=client $< | cfssljson -bare $(basename $<)-client
